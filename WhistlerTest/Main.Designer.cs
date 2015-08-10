@@ -91,7 +91,6 @@
             this.Controls.Add(this.whistlerCheckBox1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Main";
             this.Text = "Test form";
             this.ResumeLayout(false);
