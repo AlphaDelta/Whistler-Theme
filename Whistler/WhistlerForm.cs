@@ -58,12 +58,13 @@ namespace Whistler
         void SetBounds()
         {
             CaptionBounds = new Rectangle(0, 0, this.Width, 22);
-            CaptionDragBounds = new Rectangle(0, 0, CaptionBounds.Width - (buttonwidth * capcontrols.Length), CaptionBounds.Height);
+            //CaptionDragBounds = new Rectangle(0, 0, CaptionBounds.Width - (buttonwidth * capcontrols.Length), CaptionBounds.Height);
+            CaptionDragBounds = new Rectangle(0, 0, CaptionBounds.Width, CaptionBounds.Height);
             WindowBounds = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
 
-            btnClose = new Rectangle(CaptionBounds.Width - buttonwidth, 0, buttonwidth, CaptionBounds.Height);
-            btnMaximize = new Rectangle(CaptionBounds.Width - buttonwidth * 2, 0, buttonwidth, CaptionBounds.Height);
-            btnMinimize = new Rectangle(CaptionBounds.Width - buttonwidth * 3, 0, buttonwidth, CaptionBounds.Height);
+            btnClose = new Rectangle(CaptionBounds.Width - 5 - buttonwidth, 2, buttonwidth, buttonwidth);
+            btnMaximize = new Rectangle(CaptionBounds.Width - 8 - buttonwidth * 2, 2, buttonwidth, buttonwidth);
+            btnMinimize = new Rectangle(CaptionBounds.Width - 8 - buttonwidth * 3, 2, buttonwidth, buttonwidth);
         }
         protected override void OnResize(EventArgs e)
         {
@@ -80,6 +81,7 @@ namespace Whistler
             pBorderInactive = new Pen(Color.FromArgb(0x5A, 0x81, 0xBF)), pBorderShadow1Inactive = new Pen(Color.FromArgb(0x27, 0x56, 0x9F)), pBorderShadow2Inactive = new Pen(Color.FromArgb(0x2A, 0x5C, 0xAB));
         Brush bBorder = new SolidBrush(Color.FromArgb(0x35, 0x73, 0xD6)), bBorderInactive = new SolidBrush(Color.FromArgb(0x2C, 0x60, 0xB2));
         Color cCaptionTitleInactive = Color.FromArgb(0x7A, 0xA1, 0xFF);
+        static TextureBrush tbCaptionRepeat = new TextureBrush(Properties.Resources.CaptionRepeat);
         protected override void OnPaint(PaintEventArgs e)
         {
             Brush border = (realfocus ? bBorder : bBorderInactive);
@@ -98,8 +100,7 @@ namespace Whistler
                 e.Graphics.DrawImage(Properties.Resources.CaptionLeft, 0, 0);
 
                 int dong = this.Width - 139;
-                using (TextureBrush b = new TextureBrush(Properties.Resources.CaptionRepeat))
-                    e.Graphics.FillRectangle(b, 6, 0, (dong < 24 ? 24 : dong), CaptionBounds.Height);
+                e.Graphics.FillRectangle(tbCaptionRepeat, 6, 0, (dong < 24 ? 24 : dong), CaptionBounds.Height);
 
                 e.Graphics.DrawImage(Properties.Resources.CaptionDivider, (dong < 24 ? 24 : dong), 0);
             }
@@ -111,6 +112,10 @@ namespace Whistler
             {
                 e.Graphics.DrawImage(_IconImg, 4, 2);
             }
+
+            e.Graphics.DrawRectangle(Pens.Red, btnClose);
+            e.Graphics.DrawRectangle(Pens.Magenta, btnMaximize);
+            e.Graphics.DrawRectangle(Pens.Lime, btnMinimize);
         }
 
         int[] capcontrols = new int[3];
