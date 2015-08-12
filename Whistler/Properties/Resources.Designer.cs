@@ -83,9 +83,29 @@ namespace Whistler.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ButtonBackgroundActive {
+            get {
+                object obj = ResourceManager.GetObject("ButtonBackgroundActive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ButtonBackgroundDisabled {
             get {
                 object obj = ResourceManager.GetObject("ButtonBackgroundDisabled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ButtonBackgroundHover {
+            get {
+                object obj = ResourceManager.GetObject("ButtonBackgroundHover", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

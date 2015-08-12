@@ -80,7 +80,9 @@
   <ItemGroup>
     <Content Include="img\BorderLeft.png" />
     <Content Include="img\ButtonBackground.png" />
+    <Content Include="img\ButtonBackgroundActive.png" />
     <Content Include="img\ButtonBackgroundDisabled.png" />
+    <Content Include="img\ButtonBackgroundHover.png" />
     <Content Include="img\CaptionDivider.png" />
     <Content Include="img\CaptionLeft.png" />
     <Content Include="img\CaptionRepeat.png" />

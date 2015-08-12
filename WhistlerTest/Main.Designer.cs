@@ -72,12 +72,13 @@
             // 
             // whistlerButton1
             // 
-            this.whistlerButton1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.whistlerButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.whistlerButton1.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.whistlerButton1.Location = new System.Drawing.Point(12, 146);
+            this.whistlerButton1.Location = new System.Drawing.Point(95, 117);
             this.whistlerButton1.Name = "whistlerButton1";
-            this.whistlerButton1.Size = new System.Drawing.Size(266, 23);
+            this.whistlerButton1.Size = new System.Drawing.Size(116, 83);
             this.whistlerButton1.TabIndex = 3;
             this.whistlerButton1.Text = "Stretchy";
             this.whistlerButton1.UseVisualStyleBackColor = true;
