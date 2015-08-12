@@ -143,9 +143,9 @@ namespace Whistler.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap CheckBoxCheck {
+        internal static System.Drawing.Bitmap CheckBoxChecked {
             get {
-                object obj = ResourceManager.GetObject("CheckBoxCheck", resourceCulture);
+                object obj = ResourceManager.GetObject("CheckBoxChecked", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +153,69 @@ namespace Whistler.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap CheckBoxShadow {
+        internal static System.Drawing.Bitmap CheckBoxCheckedActive {
             get {
-                object obj = ResourceManager.GetObject("CheckBoxShadow", resourceCulture);
+                object obj = ResourceManager.GetObject("CheckBoxCheckedActive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CheckBoxCheckedDisabled {
+            get {
+                object obj = ResourceManager.GetObject("CheckBoxCheckedDisabled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CheckBoxCheckedHover {
+            get {
+                object obj = ResourceManager.GetObject("CheckBoxCheckedHover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CheckBoxEmpty {
+            get {
+                object obj = ResourceManager.GetObject("CheckBoxEmpty", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CheckBoxEmptyActive {
+            get {
+                object obj = ResourceManager.GetObject("CheckBoxEmptyActive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CheckBoxEmptyDisabled {
+            get {
+                object obj = ResourceManager.GetObject("CheckBoxEmptyDisabled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CheckBoxEmptyHover {
+            get {
+                object obj = ResourceManager.GetObject("CheckBoxEmptyHover", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

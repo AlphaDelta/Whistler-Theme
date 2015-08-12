@@ -49,6 +49,11 @@
     <Compile Include="Controls\WhistlerCheckBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="WhistlerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,14 +64,9 @@
     <Compile Include="WinAPI.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -86,8 +86,14 @@
     <Content Include="img\CaptionDivider.png" />
     <Content Include="img\CaptionLeft.png" />
     <Content Include="img\CaptionRepeat.png" />
-    <Content Include="img\CheckBoxCheck.png" />
-    <Content Include="img\CheckBoxShadow.png" />
+    <Content Include="img\CheckBoxChecked.png" />
+    <Content Include="img\CheckBoxCheckedActive.png" />
+    <Content Include="img\CheckBoxCheckedDisabled.png" />
+    <Content Include="img\CheckBoxCheckedHover.png" />
+    <Content Include="img\CheckBoxEmpty.png" />
+    <Content Include="img\CheckBoxEmptyActive.png" />
+    <Content Include="img\CheckBoxEmptyDisabled.png" />
+    <Content Include="img\CheckBoxEmptyHover.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
