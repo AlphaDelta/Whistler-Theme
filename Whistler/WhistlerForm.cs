@@ -114,9 +114,31 @@ namespace Whistler
                 e.Graphics.DrawImage(_IconImg, 4, 2);
             }
 
-            e.Graphics.DrawRectangle(Pens.Red, btnClose);
-            e.Graphics.DrawRectangle(Pens.Magenta, btnMaximize);
-            e.Graphics.DrawRectangle(Pens.Lime, btnMinimize);
+            //e.Graphics.DrawRectangle(Pens.Red, btnClose);
+            if (this.ControlBox)
+            {
+                if (realfocus)
+                {
+                    e.Graphics.DrawImage((capcontrols[0] == 1 ? Properties.Resources.CaptionExitHover : (capcontrols[0] == 2 ? Properties.Resources.CaptionExitActive : Properties.Resources.CaptionExit)), btnClose.Left, btnClose.Top);
+                    e.Graphics.DrawImage((this.MaximizeBox ? (capcontrols[1] == 1 ? Properties.Resources.CaptionMaximizeHover : (capcontrols[1] == 2 ? Properties.Resources.CaptionMaximizeActive : Properties.Resources.CaptionMaximize)) : Properties.Resources.CaptionMaximizeDisabled), btnMaximize.Left, btnMaximize.Top);
+                    //e.Graphics.DrawRectangle(Pens.Magenta, btnMaximize);
+                    e.Graphics.DrawRectangle(Pens.Lime, btnMinimize);
+                }
+                else if(modecanceled)
+                {
+                    e.Graphics.DrawImage(Properties.Resources.CaptionExitCanceled, btnClose.Left, btnClose.Top);
+                    e.Graphics.DrawImage(Properties.Resources.CaptionMaximizeCanceled, btnMaximize.Left, btnMaximize.Top);
+                    //e.Graphics.DrawRectangle(Pens.Magenta, btnMaximize);
+                    e.Graphics.DrawRectangle(Pens.Lime, btnMinimize);
+                }
+                else
+                {
+                    e.Graphics.DrawImage((capcontrols[0] == 1 ? Properties.Resources.CaptionExitInactiveHover : Properties.Resources.CaptionExitInactive), btnClose.Left, btnClose.Top);
+                    e.Graphics.DrawImage((this.MaximizeBox ? (capcontrols[1] == 1 ? Properties.Resources.CaptionMaximizeInactiveHover : Properties.Resources.CaptionMaximizeInactive) : Properties.Resources.CaptionMaximizeInactiveDisabled), btnMaximize.Left, btnMaximize.Top);
+                    //e.Graphics.DrawRectangle(Pens.Magenta, btnMaximize);
+                    e.Graphics.DrawRectangle(Pens.Lime, btnMinimize);
+                }
+            }
         }
 
         int[] capcontrols = new int[3];
@@ -160,16 +182,19 @@ namespace Whistler
 
                 //System.Diagnostics.Debug.WriteLine(mouse.X + ":" + mouse.Y);
 
-                UpdateCaptionControl(0, (btnClose.Contains(mouse) ? 1 : 0));
-                UpdateCaptionControl(1, (btnMaximize.Contains(mouse) ? 1 : 0));
-                UpdateCaptionControl(2, (btnMinimize.Contains(mouse) ? 1 : 0));
+                if (this.ControlBox)
+                {
+                    UpdateCaptionControl(0, (btnClose.Contains(mouse) ? 1 : 0));
+                    UpdateCaptionControl(1, (btnMaximize.Contains(mouse) ? 1 : 0));
+                    UpdateCaptionControl(2, (btnMinimize.Contains(mouse) ? 1 : 0));
 
-                foreach (int b in capcontrols)
-                    if (b != 0)
-                    {
-                        m.Result = (IntPtr)WinAPI.HTBORDER;
-                        return;
-                    }
+                    foreach (int b in capcontrols)
+                        if (b != 0)
+                        {
+                            m.Result = (IntPtr)WinAPI.HTBORDER;
+                            return;
+                        }
+                }
 
                 bool
                 left = false,
@@ -202,19 +227,22 @@ namespace Whistler
             }
             else if (m.Msg == WinAPI.WM_NCLBUTTONUP)
             {
-                Point mouse = this.PointToClient(Cursor.Position);
-                if (btnClose.Contains(mouse) && capcontrols[0] == 2) { this.Close(); return; }
-                else if (btnMaximize.Contains(mouse) && capcontrols[1] == 2)
+                if (this.ControlBox)
                 {
-                    this.WindowState = (this.WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized);
+                    Point mouse = this.PointToClient(Cursor.Position);
+                    if (btnClose.Contains(mouse) && capcontrols[0] == 2) { this.Close(); return; }
+                    else if (MaximizeBox && btnMaximize.Contains(mouse) && capcontrols[1] == 2)
+                    {
+                        this.WindowState = (this.WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized);
 
-                    return;
+                        return;
+                    }
+                    else if (btnMinimize.Contains(mouse) && capcontrols[2] == 2) { this.WindowState = FormWindowState.Minimized; return; }
+
+                    for (int i = 0; i < capcontrols.Length; i++)
+                        if (capcontrols[i] == 2) capcontrols[i] = 1;
+                    this.Invalidate();
                 }
-                else if (btnMinimize.Contains(mouse) && capcontrols[2] == 2) { this.WindowState = FormWindowState.Minimized; return; }
-
-                for (int i = 0; i < capcontrols.Length; i++)
-                    if (capcontrols[i] == 2) capcontrols[i] = 1;
-                this.Invalidate();
             }
             else if (m.Msg == WinAPI.WM_NCLBUTTONDOWN)
             {

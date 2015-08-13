@@ -136,8 +136,59 @@
   <data name="CaptionDivider" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\captiondivider.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="CaptionExit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\captionexit.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CaptionExitActive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\captionexitactive.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CaptionExitCanceled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\captionexitcanceled.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CaptionExitDisabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\captionexitdisabled.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CaptionExitHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\captionexithover.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CaptionExitInactive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\captionexitinactive.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CaptionExitInactiveActive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\captionexitinactiveactive.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CaptionExitInactiveDisabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\captionexitinactivedisabled.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CaptionExitInactiveHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\captionexitinactivehover.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CaptionLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\captionleft.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CaptionMaximize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\captionmaximize.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CaptionMaximizeActive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\captionmaximizeactive.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CaptionMaximizeCanceled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\captionmaximizecanceled.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CaptionMaximizeDisabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\captionmaximizedisabled.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CaptionMaximizeHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\captionmaximizehover.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CaptionMaximizeInactive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\captionmaximizeinactive.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CaptionMaximizeInactiveDisabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\captionmaximizeinactivedisabled.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CaptionMaximizeInactiveHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\captionmaximizeinactivehover.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CaptionRepeat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\captionrepeat.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
