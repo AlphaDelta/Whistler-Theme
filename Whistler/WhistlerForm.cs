@@ -233,7 +233,19 @@ namespace Whistler
                     if (btnClose.Contains(mouse) && capcontrols[0] == 2) { this.Close(); return; }
                     else if (this.MaximizeBox && btnMaximize.Contains(mouse) && capcontrols[1] == 2)
                     {
+                        if (this.WindowState != FormWindowState.Maximized)
+                        {
+                            oldw = this.Width;
+                            oldh = this.Height;
+                        }
+
                         this.WindowState = (this.WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized);
+
+                        if (this.WindowState == FormWindowState.Maximized)
+                        {
+                            this.Width = oldw;
+                            this.Height = oldh;
+                        }
 
                         return;
                     }
