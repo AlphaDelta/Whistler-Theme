@@ -190,6 +190,30 @@
   <data name="CaptionMaximizeInactiveHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\captionmaximizeinactivehover.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="CaptionMinimize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\captionminimize.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CaptionMinimizeActive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\captionminimizeactive.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CaptionMinimizeCanceled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\captionminimizecanceled.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CaptionMinimizeDisabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\captionminimizedisabled.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CaptionMinimizeHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\captionminimizehover.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CaptionMinimizeInactive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\captionminimizeinactive.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CaptionMinimizeInactiveDisabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\captionminimizeinactivedisabled.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CaptionMinimizeInactiveHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\captionminimizeinactivehover.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CaptionRepeat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\captionrepeat.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

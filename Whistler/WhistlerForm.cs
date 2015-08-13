@@ -19,9 +19,6 @@ namespace Whistler
             SetBounds();
 
             intback = new SolidBrush(this.BackColor);
-
-            //oldw = this.Width;
-            //oldh = this.Height;
         }
 
         Icon _Icon = null;
@@ -122,21 +119,24 @@ namespace Whistler
                     e.Graphics.DrawImage((capcontrols[0] == 1 ? Properties.Resources.CaptionExitHover : (capcontrols[0] == 2 ? Properties.Resources.CaptionExitActive : Properties.Resources.CaptionExit)), btnClose.Left, btnClose.Top);
                     e.Graphics.DrawImage((this.MaximizeBox ? (capcontrols[1] == 1 ? Properties.Resources.CaptionMaximizeHover : (capcontrols[1] == 2 ? Properties.Resources.CaptionMaximizeActive : Properties.Resources.CaptionMaximize)) : Properties.Resources.CaptionMaximizeDisabled), btnMaximize.Left, btnMaximize.Top);
                     //e.Graphics.DrawRectangle(Pens.Magenta, btnMaximize);
-                    e.Graphics.DrawRectangle(Pens.Lime, btnMinimize);
+                    e.Graphics.DrawImage((this.MinimizeBox ? (capcontrols[2] == 1 ? Properties.Resources.CaptionMinimizeHover : (capcontrols[2] == 2 ? Properties.Resources.CaptionMinimizeActive : Properties.Resources.CaptionMinimize)) : Properties.Resources.CaptionMinimizeDisabled), btnMinimize.Left, btnMinimize.Top);
+                    //e.Graphics.DrawRectangle(Pens.Lime, btnMinimize);
                 }
                 else if(modecanceled)
                 {
                     e.Graphics.DrawImage(Properties.Resources.CaptionExitCanceled, btnClose.Left, btnClose.Top);
                     e.Graphics.DrawImage(Properties.Resources.CaptionMaximizeCanceled, btnMaximize.Left, btnMaximize.Top);
                     //e.Graphics.DrawRectangle(Pens.Magenta, btnMaximize);
-                    e.Graphics.DrawRectangle(Pens.Lime, btnMinimize);
+                    e.Graphics.DrawImage(Properties.Resources.CaptionMinimizeCanceled, btnMinimize.Left, btnMinimize.Top);
+                    //e.Graphics.DrawRectangle(Pens.Lime, btnMinimize);
                 }
                 else
                 {
                     e.Graphics.DrawImage((capcontrols[0] == 1 ? Properties.Resources.CaptionExitInactiveHover : Properties.Resources.CaptionExitInactive), btnClose.Left, btnClose.Top);
                     e.Graphics.DrawImage((this.MaximizeBox ? (capcontrols[1] == 1 ? Properties.Resources.CaptionMaximizeInactiveHover : Properties.Resources.CaptionMaximizeInactive) : Properties.Resources.CaptionMaximizeInactiveDisabled), btnMaximize.Left, btnMaximize.Top);
                     //e.Graphics.DrawRectangle(Pens.Magenta, btnMaximize);
-                    e.Graphics.DrawRectangle(Pens.Lime, btnMinimize);
+                    e.Graphics.DrawImage((this.MinimizeBox ? (capcontrols[2] == 1 ? Properties.Resources.CaptionMinimizeInactiveHover : Properties.Resources.CaptionMinimizeInactive) : Properties.Resources.CaptionMinimizeInactiveDisabled), btnMinimize.Left, btnMinimize.Top);
+                    //e.Graphics.DrawRectangle(Pens.Lime, btnMinimize);
                 }
             }
         }
@@ -231,13 +231,13 @@ namespace Whistler
                 {
                     Point mouse = this.PointToClient(Cursor.Position);
                     if (btnClose.Contains(mouse) && capcontrols[0] == 2) { this.Close(); return; }
-                    else if (MaximizeBox && btnMaximize.Contains(mouse) && capcontrols[1] == 2)
+                    else if (this.MaximizeBox && btnMaximize.Contains(mouse) && capcontrols[1] == 2)
                     {
                         this.WindowState = (this.WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized);
 
                         return;
                     }
-                    else if (btnMinimize.Contains(mouse) && capcontrols[2] == 2) { this.WindowState = FormWindowState.Minimized; return; }
+                    else if (this.MinimizeBox && btnMinimize.Contains(mouse) && capcontrols[2] == 2) { this.WindowState = FormWindowState.Minimized; return; }
 
                     for (int i = 0; i < capcontrols.Length; i++)
                         if (capcontrols[i] == 2) capcontrols[i] = 1;

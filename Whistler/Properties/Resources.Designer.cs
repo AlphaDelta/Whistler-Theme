@@ -303,6 +303,86 @@ namespace Whistler.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CaptionMinimize {
+            get {
+                object obj = ResourceManager.GetObject("CaptionMinimize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CaptionMinimizeActive {
+            get {
+                object obj = ResourceManager.GetObject("CaptionMinimizeActive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CaptionMinimizeCanceled {
+            get {
+                object obj = ResourceManager.GetObject("CaptionMinimizeCanceled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CaptionMinimizeDisabled {
+            get {
+                object obj = ResourceManager.GetObject("CaptionMinimizeDisabled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CaptionMinimizeHover {
+            get {
+                object obj = ResourceManager.GetObject("CaptionMinimizeHover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CaptionMinimizeInactive {
+            get {
+                object obj = ResourceManager.GetObject("CaptionMinimizeInactive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CaptionMinimizeInactiveDisabled {
+            get {
+                object obj = ResourceManager.GetObject("CaptionMinimizeInactiveDisabled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CaptionMinimizeInactiveHover {
+            get {
+                object obj = ResourceManager.GetObject("CaptionMinimizeInactiveHover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CaptionRepeat {
             get {
                 object obj = ResourceManager.GetObject("CaptionRepeat", resourceCulture);

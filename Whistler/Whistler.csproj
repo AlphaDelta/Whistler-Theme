@@ -105,6 +105,14 @@
     <Content Include="img\CaptionMaximizeInactive.png" />
     <Content Include="img\CaptionMaximizeInactiveDisabled.png" />
     <Content Include="img\CaptionMaximizeInactiveHover.png" />
+    <Content Include="img\CaptionMinimize.png" />
+    <Content Include="img\CaptionMinimizeActive.png" />
+    <Content Include="img\CaptionMinimizeCanceled.png" />
+    <Content Include="img\CaptionMinimizeDisabled.png" />
+    <Content Include="img\CaptionMinimizeHover.png" />
+    <Content Include="img\CaptionMinimizeInactive.png" />
+    <Content Include="img\CaptionMinimizeInactiveDisabled.png" />
+    <Content Include="img\CaptionMinimizeInactiveHover.png" />
     <Content Include="img\CaptionRepeat.png" />
     <Content Include="img\CheckBoxChecked.png" />
     <Content Include="img\CheckBoxCheckedActive.png" />
