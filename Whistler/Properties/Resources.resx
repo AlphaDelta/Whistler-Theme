@@ -166,4 +166,28 @@
   <data name="CheckBoxEmptyHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\checkboxemptyhover.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="RadioButtonChecked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\radiobuttonchecked.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RadioButtonCheckedActive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\radiobuttoncheckedactive.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RadioButtonCheckedDisabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\radiobuttoncheckeddisabled.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RadioButtonCheckedHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\radiobuttoncheckedhover.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RadioButtonEmpty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\radiobuttonempty.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RadioButtonEmptyActive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\radiobuttonemptyactive.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RadioButtonEmptyDisabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\radiobuttonemptydisabled.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RadioButtonEmptyHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\radiobuttonemptyhover.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

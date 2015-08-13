@@ -49,6 +49,9 @@
     <Compile Include="Controls\WhistlerCheckBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\WhistlerRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -94,6 +97,14 @@
     <Content Include="img\CheckBoxEmptyActive.png" />
     <Content Include="img\CheckBoxEmptyDisabled.png" />
     <Content Include="img\CheckBoxEmptyHover.png" />
+    <Content Include="img\RadioButtonChecked.png" />
+    <Content Include="img\RadioButtonCheckedActive.png" />
+    <Content Include="img\RadioButtonCheckedDisabled.png" />
+    <Content Include="img\RadioButtonCheckedHover.png" />
+    <Content Include="img\RadioButtonEmpty.png" />
+    <Content Include="img\RadioButtonEmptyActive.png" />
+    <Content Include="img\RadioButtonEmptyDisabled.png" />
+    <Content Include="img\RadioButtonEmptyHover.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

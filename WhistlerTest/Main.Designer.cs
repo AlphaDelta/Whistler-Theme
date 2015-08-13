@@ -34,6 +34,12 @@
             this.whistlerButton1 = new Whistler.Controls.WhistlerButton();
             this.whistlerCheckBox2 = new Whistler.Controls.WhistlerCheckBox();
             this.whistlerCheckBox3 = new Whistler.Controls.WhistlerCheckBox();
+            this.whistlerRadioButton1 = new Whistler.Controls.WhistlerRadioButton();
+            this.whistlerRadioButton2 = new Whistler.Controls.WhistlerRadioButton();
+            this.whistlerRadioButton3 = new Whistler.Controls.WhistlerRadioButton();
+            this.whistlerRadioButton4 = new Whistler.Controls.WhistlerRadioButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnOk
@@ -41,7 +47,7 @@
             this.btnOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOk.Enabled = false;
             this.btnOk.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.btnOk.Location = new System.Drawing.Point(97, 272);
+            this.btnOk.Location = new System.Drawing.Point(115, 272);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(75, 23);
             this.btnOk.TabIndex = 0;
@@ -53,7 +59,7 @@
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.btnCancel.Location = new System.Drawing.Point(178, 272);
+            this.btnCancel.Location = new System.Drawing.Point(196, 272);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 1;
@@ -74,13 +80,12 @@
             // 
             // whistlerButton1
             // 
-            this.whistlerButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.whistlerButton1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.whistlerButton1.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.whistlerButton1.Location = new System.Drawing.Point(95, 117);
+            this.whistlerButton1.Location = new System.Drawing.Point(12, 174);
             this.whistlerButton1.Name = "whistlerButton1";
-            this.whistlerButton1.Size = new System.Drawing.Size(91, 73);
+            this.whistlerButton1.Size = new System.Drawing.Size(259, 23);
             this.whistlerButton1.TabIndex = 3;
             this.whistlerButton1.Text = "Stretchy";
             this.whistlerButton1.UseVisualStyleBackColor = true;
@@ -111,11 +116,73 @@
             this.whistlerCheckBox3.Text = "Disabled";
             this.whistlerCheckBox3.UseVisualStyleBackColor = true;
             // 
+            // whistlerRadioButton1
+            // 
+            this.whistlerRadioButton1.AutoSize = true;
+            this.whistlerRadioButton1.Checked = true;
+            this.whistlerRadioButton1.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.whistlerRadioButton1.Location = new System.Drawing.Point(12, 81);
+            this.whistlerRadioButton1.Name = "whistlerRadioButton1";
+            this.whistlerRadioButton1.Size = new System.Drawing.Size(84, 17);
+            this.whistlerRadioButton1.TabIndex = 6;
+            this.whistlerRadioButton1.TabStop = true;
+            this.whistlerRadioButton1.Text = "RadioButton";
+            this.whistlerRadioButton1.UseVisualStyleBackColor = true;
+            // 
+            // whistlerRadioButton2
+            // 
+            this.whistlerRadioButton2.AutoSize = true;
+            this.whistlerRadioButton2.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.whistlerRadioButton2.Location = new System.Drawing.Point(103, 81);
+            this.whistlerRadioButton2.Name = "whistlerRadioButton2";
+            this.whistlerRadioButton2.Size = new System.Drawing.Size(84, 17);
+            this.whistlerRadioButton2.TabIndex = 7;
+            this.whistlerRadioButton2.Text = "RadioButton";
+            this.whistlerRadioButton2.UseVisualStyleBackColor = true;
+            // 
+            // whistlerRadioButton3
+            // 
+            this.whistlerRadioButton3.AutoSize = true;
+            this.whistlerRadioButton3.Checked = true;
+            this.whistlerRadioButton3.Enabled = false;
+            this.whistlerRadioButton3.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.whistlerRadioButton3.Location = new System.Drawing.Point(3, 3);
+            this.whistlerRadioButton3.Name = "whistlerRadioButton3";
+            this.whistlerRadioButton3.Size = new System.Drawing.Size(65, 17);
+            this.whistlerRadioButton3.TabIndex = 8;
+            this.whistlerRadioButton3.TabStop = true;
+            this.whistlerRadioButton3.Text = "Disabled";
+            this.whistlerRadioButton3.UseVisualStyleBackColor = true;
+            // 
+            // whistlerRadioButton4
+            // 
+            this.whistlerRadioButton4.AutoSize = true;
+            this.whistlerRadioButton4.Enabled = false;
+            this.whistlerRadioButton4.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.whistlerRadioButton4.Location = new System.Drawing.Point(103, 104);
+            this.whistlerRadioButton4.Name = "whistlerRadioButton4";
+            this.whistlerRadioButton4.Size = new System.Drawing.Size(65, 17);
+            this.whistlerRadioButton4.TabIndex = 9;
+            this.whistlerRadioButton4.Text = "Disabled";
+            this.whistlerRadioButton4.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.whistlerRadioButton3);
+            this.panel1.Location = new System.Drawing.Point(9, 99);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(77, 22);
+            this.panel1.TabIndex = 10;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(265, 307);
+            this.ClientSize = new System.Drawing.Size(283, 307);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.whistlerRadioButton4);
+            this.Controls.Add(this.whistlerRadioButton2);
+            this.Controls.Add(this.whistlerRadioButton1);
             this.Controls.Add(this.whistlerCheckBox3);
             this.Controls.Add(this.whistlerCheckBox2);
             this.Controls.Add(this.whistlerButton1);
@@ -124,6 +191,8 @@
             this.Controls.Add(this.btnOk);
             this.Name = "Main";
             this.Text = "Test form";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,6 +206,11 @@
         private Whistler.Controls.WhistlerButton whistlerButton1;
         private Whistler.Controls.WhistlerCheckBox whistlerCheckBox2;
         private Whistler.Controls.WhistlerCheckBox whistlerCheckBox3;
+        private Whistler.Controls.WhistlerRadioButton whistlerRadioButton1;
+        private Whistler.Controls.WhistlerRadioButton whistlerRadioButton2;
+        private Whistler.Controls.WhistlerRadioButton whistlerRadioButton3;
+        private Whistler.Controls.WhistlerRadioButton whistlerRadioButton4;
+        private System.Windows.Forms.Panel panel1;
 
 
     }
