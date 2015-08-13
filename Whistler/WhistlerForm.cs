@@ -78,21 +78,22 @@ namespace Whistler
         //Font fCaption = new Font("Microsoft Sans Serif", 10.25f, FontStyle.Regular);
         Font fCaption = new Font("Tahoma", 8.25f, FontStyle.Bold);
         Pen pBorder = new Pen(Color.FromArgb(0x68, 0x96, 0xE0)), pBorderShadow1 = new Pen(Color.FromArgb(0x2F, 0x67, 0xBF)), pBorderShadow2 = new Pen(Color.FromArgb(0x33, 0x6F, 0xCE)),
-            pBorderInactive = new Pen(Color.FromArgb(0x5A, 0x81, 0xBF)), pBorderShadow1Inactive = new Pen(Color.FromArgb(0x27, 0x56, 0x9F)), pBorderShadow2Inactive = new Pen(Color.FromArgb(0x2A, 0x5C, 0xAB));
-        Brush bBorder = new SolidBrush(Color.FromArgb(0x35, 0x73, 0xD6)), bBorderInactive = new SolidBrush(Color.FromArgb(0x2C, 0x60, 0xB2));
-        Color cCaptionTitleInactive = Color.FromArgb(0x7A, 0xA1, 0xFF);
+            pBorderInactive = new Pen(Color.FromArgb(0x5A, 0x81, 0xBF)), pBorderShadow1Inactive = new Pen(Color.FromArgb(0x27, 0x56, 0x9F)), pBorderShadow2Inactive = new Pen(Color.FromArgb(0x2A, 0x5C, 0xAB)),
+            pBorderCanceled = new Pen(Color.FromArgb(0xD7, 0x89, 0x89)), pBorderShadow1Canceled = new Pen(Color.FromArgb(0xB4, 0x58, 0x58)), pBorderShadow2Canceled = new Pen(Color.FromArgb(0xC2, 0x5F, 0x5F));
+        Brush bBorder = new SolidBrush(Color.FromArgb(0x35, 0x73, 0xD6)), bBorderInactive = new SolidBrush(Color.FromArgb(0x2C, 0x60, 0xB2)), bBorderCanceled = new SolidBrush(Color.FromArgb(0xC9, 0x62, 0x62));
+        Color cCaptionTitleInactive = Color.FromArgb(0x7A, 0xA1, 0xFF), cCaptionTitleCanceled = Color.FromArgb(0xFF, 0xA5, 0xA4);
         static TextureBrush tbCaptionRepeat = new TextureBrush(Properties.Resources.CaptionRepeat);
         protected override void OnPaint(PaintEventArgs e)
         {
-            Brush border = (realfocus ? bBorder : bBorderInactive);
+            Brush border = (realfocus ? bBorder : (modecanceled ? bBorderCanceled : bBorderInactive));
             e.Graphics.FillRectangle(border, CaptionBounds);
             e.Graphics.FillRectangle(border, 0, 0, 4, this.Height);
             e.Graphics.FillRectangle(border, this.Width - 4, 0, 4, this.Height);
             e.Graphics.FillRectangle(border, 0, this.Height - 4, this.Width, 4);
 
-            e.Graphics.DrawRectangle((realfocus ? pBorder : pBorderInactive), WindowBounds);
-            e.Graphics.DrawRectangle((realfocus ? pBorderShadow1 : pBorderShadow1Inactive), 3, CaptionBounds.Bottom - 1, this.Width - 7, this.Height - CaptionBounds.Bottom - 3);
-            e.Graphics.DrawRectangle((realfocus ? pBorderShadow2 : pBorderShadow2Inactive), 2, CaptionBounds.Bottom - 2, this.Width - 5, this.Height - CaptionBounds.Bottom - 1);
+            e.Graphics.DrawRectangle((realfocus ? pBorder : (modecanceled ? pBorderCanceled : pBorderInactive)), WindowBounds);
+            e.Graphics.DrawRectangle((realfocus ? pBorderShadow1 : (modecanceled ? pBorderShadow1Canceled : pBorderShadow1Inactive)), 3, CaptionBounds.Bottom - 1, this.Width - 7, this.Height - CaptionBounds.Bottom - 3);
+            e.Graphics.DrawRectangle((realfocus ? pBorderShadow2 : (modecanceled ? pBorderShadow2Canceled : pBorderShadow2Inactive)), 2, CaptionBounds.Bottom - 2, this.Width - 5, this.Height - CaptionBounds.Bottom - 1);
 
             if (realfocus)
             {
@@ -106,7 +107,7 @@ namespace Whistler
             }
 
             e.Graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
-            TextRenderer.DrawText(e.Graphics, this.Text, fCaption, new Point((this.ShowIcon && _IconImg != null ? 27 : 9), 4), (realfocus ? Color.White : cCaptionTitleInactive));
+            TextRenderer.DrawText(e.Graphics, this.Text, fCaption, new Point((this.ShowIcon && _IconImg != null ? 27 : 9), 4), (realfocus ? Color.White : (modecanceled ? cCaptionTitleCanceled : cCaptionTitleInactive)));
 
             if (this.ShowIcon && _IconImg != null)
             {
@@ -149,8 +150,8 @@ namespace Whistler
         }
 
         const int bordersize = 8;
-        bool realfocus = true, ignore = true;
-        int oldw = 0, oldh = 0;
+        bool realfocus = true, ignore = true, modecanceled = false;
+        int oldw = 0, oldh = 0, mode = 0;
         protected override void WndProc(ref Message m)
         {
             if (m.Msg == WinAPI.WM_NCHITTEST)
@@ -253,6 +254,13 @@ namespace Whistler
 
                     this.Invalidate();
                 }
+
+                //this.Text = "ACTIVE";
+            }
+            else if (m.Msg == WinAPI.WM_ENABLE)
+            {
+                modecanceled = m.WParam.ToInt32() == 0;
+                this.Invalidate();
             }
 
             base.WndProc(ref m);

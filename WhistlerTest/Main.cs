@@ -27,5 +27,10 @@ namespace WhistlerTest
         {
             this.Close();
         }
+
+        private void stretchy_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("WM_CANCELMODE");
+        }
     }
 }

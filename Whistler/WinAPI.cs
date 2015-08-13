@@ -10,13 +10,15 @@ namespace Whistler
     {
         public const int
             /* WM (Windows Messages) */
-        WM_ACTIVATE = 0x0006,
-        WM_SETFOCUS = 0x0007,
-        WM_KILLFOCUS = 0x0008,
+        WM_ACTIVATE = 0x06,
+        WM_SETFOCUS = 0x07,
+        WM_KILLFOCUS = 0x08,
+        WM_ENABLE = 0x0A,
+        WM_CANCELMODE = 0x1F,
         WM_NCCALCSIZE = 0x83,
         WM_NCHITTEST = 0x84,
-        WM_NCLBUTTONDOWN = 0x00A1,
-        WM_NCLBUTTONUP = 0x00A2,
+        WM_NCLBUTTONDOWN = 0xA1,
+        WM_NCLBUTTONUP = 0xA2,
         WM_SYSCOMMAND = 0x0112,
         WM_NCMOUSELEAVE = 0x02A2,
         WM_MOUSELEAVE = 0x02A3,
